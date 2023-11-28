@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Social App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .post h2 {
+            margin: 0;
+        }
+
+        .like-button {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="post">
+            <h2>User 1</h2>
+            <p>This is the first post. Click the like button!</p>
+            <button class="like-button">Like</button>
+        </div>
+
+        <div class="post">
+            <h2>User 2</h2>
+            <p>Another post for the social app.</p>
+            <button class="like-button">Like</button>
+        </div>
+    </div>
+
+    <script>
+        const likeButtons = document.querySelectorAll('.like-button');
+
+        likeButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                button.textContent = 'Liked!';
+                button.style.backgroundColor = 'green';
+            });
+        });
+    </script>
+</body>
+</html>
